@@ -1,11 +1,113 @@
 :root {
     --primary-color: #89CFF0;
     --secondary-color: #fff;
+
+    --font-family: 'Poppins', sans-serif;
 }
 
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--primary-color);
+}
+
+.form {
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+}
+
+header {
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+}
+
+form {
+    margin-top: 30px;
+}
+
+form .field {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.field input,
+.field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.field input{
+    border: 1px solid #CACACA;
+    padding: 0 15px;
+}
+
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link span,
+.form-link a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #232836;
+}
+
+.form a {
+    color: #0171d3;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background-color: #d4d4d4;
+    margin: 35px 0;
+}
+
+.line::before {
+    content: "or";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-color);
+    padding: 0 15px;
 }
